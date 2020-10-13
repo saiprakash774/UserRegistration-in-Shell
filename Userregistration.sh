@@ -13,3 +13,15 @@ function Name ()
 Name $firstname
 read -p "Enter your last name: " lastname
 Name $lastname
+read -p "Enter your mail id: " mailid
+function Email ()
+{
+	useremail="^([a-zA-Z\.]+)([a-zA-Z]+)@([a-z]+)\.([a-zA-Z\.]{2,5})$"
+	if [[ $1 =~ $useremail ]]
+	then
+        	echo "email is valid"
+	else
+        	echo "email is invalid"
+	fi
+}
+Email $mailid
