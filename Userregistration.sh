@@ -1,9 +1,15 @@
 #!/bin/bash
-read -p "Enter First name " Firstname
-match="^([A-Z]+)[a-z]{2,20}$"
-if [[ $Firstname =~ $match ]];
-then
-        echo "valid"
-else
-        echo "invalid"
-fi
+read -p "Enter your first name: " firstname
+function Name ()
+{
+	username="^([A-Z]+)([A-Za-z]{2,20})$"
+	if [[ $1 =~ $username ]]
+	then
+        	echo "valid"
+	else
+        	echo "invalid"
+	fi
+}
+Name $firstname
+read -p "Enter your last name: " lastname
+Name $lastname
