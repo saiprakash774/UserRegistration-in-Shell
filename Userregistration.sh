@@ -36,7 +36,7 @@ else
 fi
 
 read -p "Enter the password :" password
-pattern="^([A-Z]+)([a-zA-Z]{7,20})$"
+pattern="^([A-Z]+)([0-9]+)[0-9a-zA-Z]{6,20}$"
 if [[ $password =~ $pattern ]];
 then
         echo "valid"
