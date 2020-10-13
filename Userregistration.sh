@@ -34,3 +34,12 @@ then
 else
         echo "phone number is invalid"
 fi
+
+read -p "Enter the password :" password
+pattern="[a-zA-Z0-9]{8,20}"
+if [[ $password =~ $pattern ]];
+then
+        echo "valid"
+else
+        echo "invalid"
+fi
