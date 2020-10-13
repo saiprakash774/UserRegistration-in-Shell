@@ -25,3 +25,12 @@ function Email ()
 	fi
 }
 Email $mailid
+
+read -p "Enter your phone number: " number
+match="^[1-9]{2}\ [7-9]{1}[0-9]{9}$"
+if [[ $number =~ $match ]];
+then
+        echo "phone number is valid"
+else
+        echo "phone number is invalid"
+fi
