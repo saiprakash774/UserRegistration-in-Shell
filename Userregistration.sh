@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 read -p "Enter your first name: " firstname
 function Name ()
 {
@@ -36,7 +36,7 @@ else
 fi
 
 read -p "Enter the password :" password
-pattern="^([A-Z]+)([0-9]+)[0-9a-zA-Z]{6,20}$"
+pattern="^([A-Z]+)([0-9]+)[@#$%^&*]{1}[0-9a-zA-Z\@\#\$\%\^\&\*]{5,20}$"
 if [[ $password =~ $pattern ]];
 then
         echo "valid"
