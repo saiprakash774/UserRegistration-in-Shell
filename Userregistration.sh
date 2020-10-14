@@ -16,7 +16,7 @@ Name $lastname
 read -p "Enter your mail id: " mailid
 function Email ()
 {
-	useremail="^([a-zA-Z\.]+)([a-zA-Z]+)@([a-z]+)\.([a-zA-Z\.]{2,5})$"
+	useremail="^([a-zA-Z0-9\.\-\+]+)@([a-zA-Z0-9\.]{1,5})([a-zA-Z\.]+){1,4}([a-zA-Z]{1,3})$"
 	if [[ $1 =~ $useremail ]]
 	then
         	echo "email is valid"
